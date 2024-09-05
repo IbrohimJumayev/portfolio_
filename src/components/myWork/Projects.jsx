@@ -21,7 +21,7 @@ const Projects = () => {
     {
       img: "/drum.png",
       title:
-        "simple javascript app when you push your keyboard it will make sounds",
+        "simple javascript app when you push your keyboard it  makes sounds",
       linkView: "https://javascript-drum-kit-nu.vercel.app/",
       linkGitHub: "https://github.com/IbrohimJumayev/Javascript-drum-kit",
       linkViewTitle: "Click to see the project",
