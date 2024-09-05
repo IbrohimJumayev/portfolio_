@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+nav li:hover {
+  color: #0077ff;
+  transition-duration: 0.2s;
+  font-weight: bold;
+}
+
+.skills p {
+  background-color: #0077ff;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-align: center;
+}
