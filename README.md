@@ -11,3 +11,4 @@ Currently, two official plugins are available:
 # Ibrohim-Jumayev-portfolio
 # portfolio_Ibrohim
 # portfolio_Ibrohim
+# portfolio_Ibrohim
