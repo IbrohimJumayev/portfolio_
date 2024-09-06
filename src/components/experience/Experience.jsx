@@ -1,12 +1,6 @@
-import React from "react";
-import dynamic from "next/dynamic";
+import React, { Suspense, lazy } from "react";
 
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
+const AnimatedNumbers = lazy(() => import("react-animated-numbers"));
 
 const achievementsList = [
   {
@@ -41,19 +35,21 @@ const Experience = () => {
             >
               <h2 className="text-blueLight text-4xl font-bold flex flex-row">
                 {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-blueLight text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 170 * (index + 1),
-                    };
-                  }}
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <AnimatedNumbers
+                    includeComma
+                    animateToNumber={parseInt(achievement.value)}
+                    locale="en-US"
+                    className="text-blueLight text-4xl font-bold"
+                    configs={(_, index) => {
+                      return {
+                        mass: 1,
+                        friction: 100,
+                        tensions: 170 * (index + 1),
+                      };
+                    }}
+                  />
+                </Suspense>
                 {achievement.postfix}
               </h2>
               <p className="text-blueLight text-base">{achievement.metric}</p>
