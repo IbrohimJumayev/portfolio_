@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
@@ -71,7 +72,11 @@ const Projects = () => {
       <p className="font-bold text-2xl text-center mt-5 mb-10">Projects</p>
       <ul className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((project, index) => (
-          <li
+          <motion.li
+            animate={{ y: 20 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
             className="shadow-xl p-2 flex flex-col justify-between gap-5"
             key={index}
           >
@@ -97,7 +102,7 @@ const Projects = () => {
                 {project.linkGitHubTitle}
               </a>
             </div>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>

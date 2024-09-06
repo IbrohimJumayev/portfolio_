@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const handleClose = () => setIsOpen(false);
   return (
-    <nav className="flex justify-between items-center pt-5 pb-5 shadow-sm w-full m-auto fixed top-0 z-50 overflow-hidden px-10 bg-white">
+    <nav className="flex justify-between items-center pt-5 pb-5 shadow-sm w-full m-auto fixed top-0 z-50 overflow-hidden px-5 sm:px-10 bg-white">
       <div>
         <a href="#" className="text-blueLight font-bold text-3xl">Ibrohim</a>
       </div>
